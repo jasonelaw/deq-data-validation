@@ -1,0 +1,68 @@
+{
+    "fields": [
+        {
+            "name": "monitoring_location_id",
+            "title": "Monitoring Location ID",
+            "type": "string",
+            "constraints": {
+                "required": true
+            }
+        },
+        {
+            "name": "monitoring_location_name",
+            "title": "Monitoring Location Name",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "pattern": "(Mon|Tue|Wednes|Thurs|Fri|Satur|Sun)day"
+            }
+        },
+        {
+            "name": "monitoring_location_type",
+            "title": "Monitoring Location Type",
+            "type": "string",
+            "constraints": {
+                "required": true,
+                "enum": ["NAD27","NAD83","WGS84"]
+            }
+        },
+        {
+            "name": "latitude",
+            "title": "Latitude",
+            "type": "number",
+            "constraints": {
+                "required": true,
+                "minimum": -90,
+                "maximum": 90
+            }
+        },
+        {
+            "name": "longitude",
+            "title": "Longitude",
+            "type": "number",
+            "constraints": {
+                "required": true,
+                "minimum": -180,
+                "maxium": 180
+            }
+        },
+        {
+            "name": "county",
+            "title": "County Name",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": ["MULTNOMAH", "WASHINGTON", "CLACKAMAS"]
+            }
+        },
+        {
+            "name": "state",
+            "title": "State Code",
+            "type": "string",
+            "constraints": {
+                "required": false,
+                "enum": ["OR"]
+            }
+        }
+    ]
+}
